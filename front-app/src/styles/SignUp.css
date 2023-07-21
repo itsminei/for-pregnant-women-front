@@ -1,0 +1,17 @@
+body{
+    background-color:#FFEBF5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     min-height: 100vh;
+    text-align: center;
+}
+input{
+    background-color: white;
+    color: black; /* 버튼 텍스트의 색상을 검은색으로 설정 */
+    width: 210px;
+    height: 50px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}

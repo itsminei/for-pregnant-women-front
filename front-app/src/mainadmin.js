@@ -11,13 +11,11 @@ const main = () => {
     <div className='main'>
       <h1>핑크 서브웨이</h1>
       <img src={IMG} alt='image'></img>
-      <Link to='/login'>
-        <button>로그인 하기</button>
+      <Link to='/realtime'>
+        <button>실시간 임산부 배려석 점유 현황</button>
       </Link>
       <br />
-      <Link to='/signup'>
-        <button>회원가입 하기</button>
-        </Link>
+        <button>"양보해주세요"</button>
     </div>
   );
 }

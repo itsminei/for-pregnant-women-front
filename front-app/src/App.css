@@ -1,5 +1,4 @@
  *{
-  background-color:#FFEBF5;
   font-family: 'GangwonEdu_OTFBoldA';
 }
  
@@ -10,6 +9,7 @@
   font-style: normal;
 }
  .main {
+  background-color:#FFEBF5;
   display: flex;
   flex-direction: column;
   justify-content: center;

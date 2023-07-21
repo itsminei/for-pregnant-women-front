@@ -3,6 +3,9 @@ import {BrowserRouter,Routes,Route } from 'react-router-dom';
 import './App.css';
 import Main from'./main'
 import Realtime from './componnents/rtsp';
+import MainAdmin from './mainadmin'
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   return (
@@ -11,6 +14,9 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main />}></Route>
           <Route path='/realtime' element={<Realtime />}></Route>
+          <Route path='/admin' element={<MainAdmin />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/signup' element={<SignUp />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
