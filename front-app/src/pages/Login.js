@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { authService } from "../fbase";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [signinEmail, setSigninEmail] = useState("");
   const [signinPassword, setSigninPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-
+  
+  const navigate = useNavigate();
   const signin = async () => {
     try {
       setErrorMsg("");
@@ -16,6 +18,10 @@ const Login = () => {
         signinPassword
       );
       console.log(signinUser);
+      localStorage.setItem("access_token",signinUser._tokenResponse.kind);
+      if(signinUser.operationType === "signIn"){
+        navigate('/admin')
+      }
       setSigninEmail("");
       setSigninPassword("");
     } catch (err) {

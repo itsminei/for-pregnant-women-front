@@ -17,9 +17,11 @@ const SignUp = () => {
       setRegisterEmail("");
       setRegisterPassword("");
       if (createdUser.operationType === "signIn") {
-        alert("회원가입 성공, 로그인페이지로 이동합니다.");
-        navigate("/login"); // 로그인 페이지로 이동합니다.
+        alert("회원가입 성공. 메인페이지로 이동합니다.");
+        navigate("/admin"); // 메인 페이지
       }
+      localStorage.setItem('access_token',createdUser._tokenResponse.idToken);
+      localStorage.setItem('refresh_token',createdUser._tokenResponse.refreshToken);
     } catch (err) {
       //console.log(err.code);
       switch (err.code) {

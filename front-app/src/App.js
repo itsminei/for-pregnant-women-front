@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route } from 'react-router-dom';
-import './App.css';
 import Main from'./main'
+import './App.css';
 import Realtime from './componnents/rtsp';
 import MainAdmin from './mainadmin'
 import Login from './pages/Login';
